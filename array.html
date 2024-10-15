@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let arr = []; //Creation of an Empty Array
+        let arr1 = new Array(); // Same
+        let arr2 = new Array(10); //Creation of an array with defined size
+        let arr3 = new Array(10,20,30,40,50); //Static Allocation of Elements into an Array
+        let arr4 = [10,20,30,40]; //Same
+        
+        let num1 = arr4[0]; //Accessing the element in an array.
+        let num2 = arr2.length; //Finding the length of the defined array.
+        let num3 = arr3.at(-1); //Accessing the element with the both positive and ht enegative indexes
+        let num4 = arr3.at(1);//Same
+
+        let arr5 = arr3.concat(arr4); //Concatination of 2 Arrays.
+
+        let arr6 = arr5.concat(arr1,arr3); //Concatination of 3 Arrays.
+        arr = [10,20,20,30,40,50,60];
+        arr.fill(10,0,5);
+        document.write(arr);
+
+        let num = [1,2,3,4,5,6,7,8,9,10];
+        function findOdd(number) {
+            if(number%2!=0) {
+                return number;
+            }
+        }
+        let res = num.filter(findOdd);
+        document.write("<br> Odd Numbers Present in The Array : ")
+        document.write(res);
+        let res1 = res.every(findOdd);
+        document.write("<br>Every element present in the res array are odd : "+res1);
+        
+/*
+        find()	        ------- Returns the value of the first element in an array that pass a test
+        findIndex()     ------- Returns the index of the first element in an array that pass a test
+        findLast()	    ------- Returns the value of the last element in an array that pass a test
+        findLastIndex() ------- Returns the index of the last element in an array that pass a test
+*/
+    let numberr = ["Apple","Bat","bat","cat","Ant","Agile","Donkey"];
+    let dup = numberr.slice();
+    dup.sort();
+    document.write(dup);
+    document.write(Date());
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onkeydown="PrintName()">What is Your Name..?</button>
+    <p id="named"></p>
+    <script>
+        function PrintName() {
+            document.getElementById("named").innerHTML="My NAme is Murali";
+
+        }
+        const name = {
+                        first : "Murali",
+                        last : "Mahalpati",
+                        age : 21,
+                        vote : function() {
+                            if(age>21) {
+                                return "Eligible to Vote...!";
+                            }
+                            else {
+                                return "Not Eligible to Vote...!";
+                            }
+                        }
+        };
+        document.write(name.age);
+        const person = new Object();
+        person.age = 41;
+        person.gender = "Male";
+        person.name = "Mohan Babu";
+        //The Object.assign() method copies properties from one or more source objects to a target object.
+        Object.assign(name,person);
+        document.write(name.age);
+        let value = Object.entries(name);
+        //Object.entries() returns an array of the key/value pairs in an object:
+        document.write(value);
+
+        for(let [key,value] of Object.entries(name)) {
+            document.write(key+" : "+value+"<br>");
+        }
+        
+        //Object.values() is similar to Object.entries(), but returns a single dimension array of the object values:
+
+        document.write(Object.keys(name)+"<br>"+Object.values(name));
+        
+    for(let k in name) {
+        document.write("<br><br>"+name[k]+":"+k);
+    }
+
+    const ruler = {
+            agger : 0,
+            get namer() {
+                return "Murali Mahalpati";
+            },
+            set ager(ager) {
+                this.agger = ager;
+            }
+    }
+    ruler.ager = 50;
+    document.write("<br>"+ruler.namer);
+    document.write("<br>"+ruler.ager);
+    let namer = [10,30,40,50];
+    for(c of namer)
+        document.write(c)
+    </script>
+    
+</body>
+</html>
